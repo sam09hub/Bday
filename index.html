@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Happy Birthday Nibras!</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <div class="main-content">
+    <h1 class="sparkle-message">Happy Birthday, Nibras!
+    <p>Wishing you love, light, and laughter today and always.</p></h1>
+    <button onclick="startConfetti()"></button>
+  </div>
+
+  <canvas id="confetti"></canvas>
+  <canvas id="balloonCanvas"></canvas>
+
+  <script src="script.js"></script>
+  
+  <div class="photo-frame hidden" id="photoSurprise">
+    <div class="photo-frame-container">
+        <div class="photo-frame-card">
+          <div class="front">
+            <img src="photo.jpg" alt="Us together" />
+              <p>Forever Us</p>
+           </div>
+          <div class="back">
+            <img id="cakeImg" src="lit.png" alt="Birthday Cake" style="width:100%; height:80%; border-radius:20px;" />
+            <button onclick="toggleCandle()"></button>
+          </div>
+        </div>
+    </div>
+    
+</div>
+<div class="marquee-strip">
+    <div class="marquee-content">
+      <img src="nibras.jpg" alt="Memory 1">
+      <img src="cutie.jpg" alt="Memory 2">
+      <img src="cutie2.jpg" alt="Memory 3">
+      <img src="cutie3.jpg" alt="Memory 4">
+      <img src="cutie4.jpg" alt="Memory 4">
+      <!-- Add more images here -->
+    </div>
+  </div>
+
+   
+  
+</body>
+</html>
