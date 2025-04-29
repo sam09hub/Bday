@@ -1,0 +1,184 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', sans-serif;
+    background: #0e0e0e;
+    overflow-x: hidden;
+    text-align: center;
+  }
+  
+  .main-content {
+    z-index: 2;
+    position: relative;
+    padding-top: 15vh;
+  }
+  .photo-frame {
+    position: fixed;
+    top: 15%;
+    left: 50%;
+    transform: translate(-50%);
+    width: 260px;
+    padding: 15px;
+    background: #fff0f5;
+    border: 5px solid #fcd5ce;
+    border-radius: 20px;
+    box-shadow: 0 0 25px rgba(255, 182, 193, 0.6);
+    z-index: 5;
+    text-align: center;
+    animation: fadeIn 2s ease forwards;
+    opacity: 0;
+  }
+  
+  .photo-frame img {
+    width: 100%;
+    border-radius: 15px;
+  }
+  
+  .photo-frame p {
+    margin-top: 10px;
+    font-family: 'Segoe Script', cursive;
+    color: #ff5e78;
+    font-size: 1.2rem;
+  }
+  
+  .hidden {
+    display: none;
+  }
+  
+  @keyframes fadeIn {
+    to {
+      opacity: 1;
+    }
+  }
+  
+  
+  canvas#confetti,
+  canvas#balloonCanvas {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    pointer-events: none;
+  }
+  .photo-frame-container {
+    position: relative;
+    width: 200px;
+    height: 250px;
+    margin: 30px auto;
+    perspective: 1000px;
+    z-index: 2;
+  }
+  
+  .photo-frame-card {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    transform-style: preserve-3d;
+    transition: transform 1s;
+  }
+  
+  .photo-frame-container:hover .photo-frame-card {
+    transform: rotateY(180deg);
+  }
+  
+  .photo-frame-card .front,
+  .photo-frame-card .back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+  }
+  
+  .photo-frame-card .front {
+    background-color: #fff;
+    z-index: 2;
+  }
+  
+  .photo-frame-card .back {
+    background-color: #ffecd2;
+    transform: rotateY(180deg);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .photo-frame-card button {
+    margin-top: 10px;
+    padding: 8px 16px;
+    border: none;
+    border-radius: 10px;
+    background-color: #ff6b6b;
+    color: white;
+    cursor: pointer;
+    font-size: 1rem;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+  }
+  
+  .photo-frame-card button:hover {
+    background-color: #ee5253;
+  }
+  .sparkle-message {
+    text-align: center;
+    font-size: 2rem;
+    font-weight: bold;
+    background: linear-gradient(45deg, #ff6ec4, #7873f5, #47e891, #ffd700);
+    background-size: 400% 400%;
+    -webkit-background-clip: text;
+    color: transparent;
+    animation: shimmer 3s ease-in-out infinite, sparkleGlow 1.5s ease-in-out infinite;
+    text-shadow: 0 0 5px #fff, 0 0 10px #ffb6c1, 0 0 15px #f0f;
+  }
+  
+  @keyframes shimmer {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+  }
+  
+  @keyframes sparkleGlow {
+    0% { text-shadow: 0 0 5px #fff, 0 0 10px #ffb6c1, 0 0 15px #f0f; }
+    50% { text-shadow: 0 0 10px #ffb6c1, 0 0 20px #f0f, 0 0 25px #ff6ec4; }
+    100% { text-shadow: 0 0 5px #fff, 0 0 10px #ffb6c1, 0 0 15px #f0f; }
+  }
+  .marquee-strip {
+    position: fixed;
+    bottom: 20px; /* or use right: 20px for vertical side alignment */
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    z-index: 1;
+  }
+  
+  .marquee-content {
+    display: flex;
+    gap: 20px;
+    animation: scrollPhotos 30s linear infinite;
+  }
+  
+  .marquee-content img {
+    height: 150px;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(155, 67, 67, 0.2);
+    transition: transform 0.3s ease;
+  }
+  
+  .marquee-content img:hover {
+    transform: scale(1.1);
+  }
+  
+  @keyframes scrollPhotos {
+    0% { transform: translateX(100%); }
+    100% { transform: translateX(-100%); }
+  }
+
+  
+
+  
+  .nav.prev { left: -20px; }
+  .nav.next { right: -20px; }
+  
+
+  
