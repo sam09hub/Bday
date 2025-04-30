@@ -172,4 +172,7 @@ document.addEventListener("DOMContentLoaded", function () {
     const cake = document.getElementById('cakeImg');
     cake.src = cake.src.includes('lit.png') ? 'unlit.png' : 'lit.png';
   }
-  
+  document.body.addEventListener('click', function () {
+  const audio = document.getElementById("myAudio");
+  audio.play();
+}, { once: true });
